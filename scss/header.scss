@@ -4,7 +4,7 @@
     .container{
         display: flex;
         align-items: center;
-        height: 64px;
+        height: $header-height;
     }
 
     &-menu{

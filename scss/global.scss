@@ -12,6 +12,15 @@ a{
     color: $color-navy;
 }
 
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+  
 .button{
     display: inline-flex;
     align-items: center;
@@ -23,3 +32,5 @@ a{
     background-color: $color-blue;
     border-radius: $border-radius;
 }
+
+

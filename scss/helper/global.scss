@@ -16,8 +16,8 @@ a{
 
 .icon {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
@@ -31,8 +31,21 @@ a{
     font-weight: bold;
     height: $finger-size;
     color: white;
-    background-color: $color-blue;
+    background-color: transparent;
     border-radius: $border-radius;
+
+    &-icon{
+        color: black;
+        justify-content: center;
+        width: $finger-size;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &-blue{
+        color: white;
+        background-color: $color-blue;
+    }
 }
 
 

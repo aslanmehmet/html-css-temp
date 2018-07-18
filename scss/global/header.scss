@@ -5,18 +5,58 @@
         display: flex;
         align-items: center;
         height: $header-height;
+        position: relative;
+    }
+
+    
+    &-switch{
+        margin-left: auto;
+        background-color: white;
+        height: $finger-size;
+        width: $finger-size;
+        @include mq("tablet"){
+            display: none;
+        }
     }
 
     &-menu{
-        margin-left: auto;
+        pointer-events: none;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: .2s;
         display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        padding-bottom: 20px;
+        padding-left: $gutter;
+        padding-right: $gutter;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 20px 30px rgba($color: black, $alpha: .2);
 
+        .Header.menu-show &{
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        @include mq("tablet"){
+            margin-left: auto;
+            display: flex;    
+        }
+        
         &-user{
             margin-right: 10px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             a{
+                width: 100%; 
                 display: inline-flex;
                 align-items: center;
+                justify-content: center;
                 padding-left: 20px;
                 padding-right: 20px;
                 height: $finger-size;
@@ -26,12 +66,23 @@
                 }
             }
         }
+        
+        &-property{
+            justify-content: center;
+            margin-top: 20px;
+        }
 
         &-helper{
-            margin-left: 20px;
+            margin-top: 20px;
             display: flex;
-            
+            justify-content: center;
+
+            @include mq("tablet"){
+                margin-left: 20px;
+            }
+
             select{
+                background-color: white;
                 appearance: none;
                 border: 1px solid #E0E6F1;
                 padding-left: 10px;

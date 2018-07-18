@@ -346,7 +346,9 @@ body {
 .container {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-right: 20px;
+  padding-left: 20px; }
 
 a {
   color: #083B87; }
@@ -375,25 +377,69 @@ a {
   .Header .container {
     display: flex;
     align-items: center;
-    height: 64px; }
-  .Header-menu {
+    height: 64px;
+    position: relative; }
+  .Header-switch {
     margin-left: auto;
-    display: flex; }
+    background-color: white;
+    height: 40px;
+    width: 40px; }
+    @media (min-width: 768px) {
+      .Header-switch {
+        display: none; } }
+  .Header-menu {
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    transition: .2s;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); }
+    .Header.menu-show .Header-menu {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      pointer-events: auto; }
+    @media (min-width: 768px) {
+      .Header-menu {
+        margin-left: auto;
+        display: flex; } }
     .Header-menu-user {
       margin-right: 10px;
-      display: flex; }
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
       .Header-menu-user a {
+        width: 100%;
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         padding-left: 20px;
         padding-right: 20px;
         height: 40px; }
         .Header-menu-user a:hover {
           background-color: #eee; }
+    .Header-menu-property {
+      justify-content: center;
+      margin-top: 20px; }
     .Header-menu-helper {
-      margin-left: 20px;
-      display: flex; }
+      margin-top: 20px;
+      display: flex;
+      justify-content: center; }
+      @media (min-width: 768px) {
+        .Header-menu-helper {
+          margin-left: 20px; } }
       .Header-menu-helper select {
+        background-color: white;
         -webkit-appearance: none;
            -moz-appearance: none;
                 appearance: none;

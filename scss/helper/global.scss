@@ -6,6 +6,8 @@ body{
     max-width: $max-width;
     margin-left: auto;
     margin-right: auto;
+    padding-right: $gutter;
+    padding-left: $gutter;
 }
 
 a{

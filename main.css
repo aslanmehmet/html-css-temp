@@ -496,3 +496,18 @@ a {
   .Navigation-item {
     margin-right: 20px;
     font-size: 0.9em; }
+
+.Showcase {
+  text-align: center;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #083B87; }
+
+.Search {
+  background-color: #FBBE00;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); }
+  .Search-form {
+    position: relative;
+    display: flex; }

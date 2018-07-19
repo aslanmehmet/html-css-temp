@@ -492,4 +492,7 @@ a {
   .Navigation .container {
     height: 100%;
     display: flex;
-    align-content: center; }
+    align-items: center; }
+  .Navigation-item {
+    margin-right: 20px;
+    font-size: 0.9em; }
